@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.form p, .form label, .form legend, .form small, .form h3 {
+    font-family: var(--font-family);
+}
+
+.form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form > form > legend {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.form > form > .form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form > form > .form-fields > .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 400px;
+}
+
+.form > form > .form-fields > .form-field > input {
+    border-radius: 5px;
+    padding: 3px 0 3px 7px;
+    flex: 1;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+
+.form > form > .form-fields > .submit {
+    display: flex;
+    justify-content: center;
+}
+
+.form > form > .form-fields > .submit > input {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-weight: 900;
+    transition: 0.2s;
+}
+
+
+.form > form > .form-fields > .form-field > .invalid > span {
+    color: #e06060;
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.form > form > .form-fields > .submit > input:hover {
+    background-color: #00000041;
+    color: #fff;
+}
+
+@media screen and (max-width: 485px) {
+    .form > form > .form-fields > .form-field {
+        width: 300px;
+    }
+}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <h4>{{ current_user.name }}</h4>
+        {% for workspace in current_user.workspaces %}
+            <p>{{ workspace.title }} | {{ workspace.id }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
